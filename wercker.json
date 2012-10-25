@@ -1,5 +1,33 @@
 {
-  "services": {
-    "mongodb": true
+  "services" :
+  {
+    "mongodb" : true
+  },
+  "customSteps" : {
+    "setup_environment" : {
+      "commands": [
+        "export LANG=en_US.UTF-8",
+        "export LC_ALL=en_US.UTF-8",
+        "export RAILS_ENV=test",
+        "export WERCKER=true"
+      ]
+    },
+  "platform_dependencies" : {
+      "commands": [
+        "gem install bundler",
+        "rbenv rehash"
+      ]
+    },
+  "application_dependencies" : {
+      "commands": [
+        "bundle install",
+        "rbenv rehash"
+      ]
+    },
+    "test": {
+      "commands" : [
+        "bundle exec rspec spec -f d"
+      ]
+    }
   }
 }
