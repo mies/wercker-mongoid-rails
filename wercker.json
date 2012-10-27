@@ -23,11 +23,6 @@
         "bundle install",
         "rbenv rehash"
       ]
-    },
-    "test": {
-      "commands" : [
-        "rake db:mongoid:drop"
-      ]
     }
   }
 }
