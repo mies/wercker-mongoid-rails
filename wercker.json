@@ -3,7 +3,7 @@
   {
     "mongodb" : true
   },
-  "preInstallScripts" : ["echo env"],
+  "preInstallScripts" : ["printenv"],
   "customSteps" : {
     "setup_environment" : {
       "commands": [
