@@ -71,7 +71,7 @@ test:
     default:
       database: wercker_mongoid_rails_test
       hosts:
-        - <%= ENV['WERCKER_MONGODB_HOST'] %> || localhost:27017
+        - <%= ENV['WERCKER_MONGODB_HOST'] || 'localhost:27017' %>
       options:
         consistency: :strong
         # In the test environment we lower the retries and retry interval to
