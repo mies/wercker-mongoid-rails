@@ -1,11 +1,10 @@
 {
-  "services" :
-  {
+  "services" : {
     "mongodb" : true
   },
-  "preInstallScripts" : ["printenv"],
-  "customSteps" : {
-    "setup_environment" : {
+  "pre-install" : ["printenv"],
+  "custom steps" : {
+    "setup environment" : {
       "commands": [
         "export LANG=en_US.UTF-8",
         "export LC_ALL=en_US.UTF-8",
